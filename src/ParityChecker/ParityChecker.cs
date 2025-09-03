@@ -7,6 +7,6 @@ public class ParityChecker
 	 */
     public static bool IsEven(int studentId)
 	{
-		
+		return studentId % 2 == 0;
 	}
 }

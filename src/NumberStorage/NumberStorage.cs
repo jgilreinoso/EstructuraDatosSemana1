@@ -15,5 +15,10 @@ public class NumberStorage
 
 	public int GetNumberAt(int index)
 	{
+		if (index < 0 || index >= numbers.Length)
+		{
+			throw new IndexOutOfRangeException();
+		}
+		return numbers[index];
 	}
 }

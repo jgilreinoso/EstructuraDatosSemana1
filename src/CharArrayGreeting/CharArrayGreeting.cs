@@ -8,6 +8,6 @@ public class CharArrayGreeting
 	 */
     public static string Greet(char[] fullName)
 	{
-		//TODO: retornar el saludo parecido a "Hola, fullName!";
+		return "Hola, " + new string(fullName) + "!";
 	}
 }

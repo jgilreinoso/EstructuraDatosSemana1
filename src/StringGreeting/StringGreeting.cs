@@ -8,6 +8,6 @@ public class StringGreeting
 	 */
     public static string Greet(string fullName)
 	{
-		//TODO: retornar saludo, ej: Hola, fullName!
+		return "Hola, " + fullName + "!";
 	}
 }
