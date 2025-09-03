@@ -20,13 +20,39 @@ public class Book
 
 	public string GetRandomLineFromFirstPage(Random? rng = null)
 	{
+		rng ??= new Random();
+		
+		if (pages.Length == 0 || pages[0].Length == 0)
+			return string.Empty;
+			
+		int randomLineIndex = rng.Next(pages[0].Length);
+		return new string(pages[0][randomLineIndex]);
 	}
 
 	public string GetRandomLineFromCentralPage(Random? rng = null)
 	{
+		rng ??= new Random();
+		
+		if (pages.Length == 0)
+			return string.Empty;
+			
+		int centralPageIndex = pages.Length / 2;
+		if (pages[centralPageIndex].Length == 0)
+			return string.Empty;
+			
+		int randomLineIndex = rng.Next(pages[centralPageIndex].Length);
+		return new string(pages[centralPageIndex][randomLineIndex]);
 	}
 
 	public string GetRandomLineFromLastPage(Random? rng = null)
 	{
+		rng ??= new Random();
+		
+		if (pages.Length == 0 || pages[pages.Length - 1].Length == 0)
+			return string.Empty;
+			
+		int lastPageIndex = pages.Length - 1;
+		int randomLineIndex = rng.Next(pages[lastPageIndex].Length);
+		return new string(pages[lastPageIndex][randomLineIndex]);
 	}
 }
